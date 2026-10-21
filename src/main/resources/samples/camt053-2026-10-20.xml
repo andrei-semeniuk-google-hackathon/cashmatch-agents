@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.053.001.08">
+  <BkToCstmrStmt>
+    <GrpHdr>
+      <MsgId>STMT-20261020-001</MsgId>
+      <CreDtTm>2026-10-20T18:00:00Z</CreDtTm>
+    </GrpHdr>
+    <Stmt>
+      <Id>STMT-20261020-001</Id>
+      <Acct><Id><IBAN>NL91ABNA0417164300</IBAN></Id><Ccy>EUR</Ccy></Acct>
+      <Ntry>
+        <Amt Ccy="EUR">320.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <ValDt><Dt>2026-10-20</Dt></ValDt>
+        <AcctSvcrRef>BNK-20261020-9001</AcctSvcrRef>
+        <NtryDtls><TxDtls><RmtInf><Ustrd>Office rent</Ustrd></RmtInf></TxDtls></NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="EUR">12400.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-20</Dt></BookgDt>
+        <ValDt><Dt>2026-10-20</Dt></ValDt>
+        <AcctSvcrRef>BNK-20261020-0001</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>XBCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs><EndToEndId>E2E-0001</EndToEndId></Refs>
+            <Chrgs><Rcrd><Amt Ccy="EUR">0.00</Amt><ChrgInclInd>false</ChrgInclInd><Br>DEBT</Br></Rcrd></Chrgs>
+            <RltdPties>
+              <Dbtr><Pty><Nm>ACME ROBOTICS GMBH</Nm></Pty></Dbtr>
+              <DbtrAcct><Id><IBAN>DE89370400440532013000</IBAN></Id></DbtrAcct>
+            </RltdPties>
+            <RmtInf><Ustrd>INV-2026-0101</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="GBP">4980.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-20</Dt></BookgDt>
+        <ValDt><Dt>2026-10-20</Dt></ValDt>
+        <AcctSvcrRef>BNK-20261020-0002</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>XBCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs><EndToEndId>E2E-0002</EndToEndId></Refs>
+            <Chrgs><Rcrd><Amt Ccy="GBP">0.00</Amt><ChrgInclInd>false</ChrgInclInd><Br>SHAR</Br></Rcrd></Chrgs>
+            <RltdPties>
+              <Dbtr><Pty><Nm>NORTHWIND TRADING LTD</Nm></Pty></Dbtr>
+              <DbtrAcct><Id><IBAN>GB29NWBK60161331926819</IBAN></Id></DbtrAcct>
+            </RltdPties>
+            <RmtInf><Ustrd>Inv 2026/102 + Inv 2026/103</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="EUR">9995.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-20</Dt></BookgDt>
+        <ValDt><Dt>2026-10-20</Dt></ValDt>
+        <AcctSvcrRef>BNK-20261020-0003</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>XBCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs><EndToEndId>E2E-0003</EndToEndId></Refs>
+            <AmtDtls><InstdAmt><Amt Ccy="CHF">9380.00</Amt></InstdAmt></AmtDtls>
+            <Chrgs><Rcrd><Amt Ccy="EUR">0.00</Amt><ChrgInclInd>false</ChrgInclInd><Br>SHAR</Br></Rcrd></Chrgs>
+            <RltdPties>
+              <Dbtr><Pty><Nm>HELVETIA PRECISION AG ZUERICH</Nm></Pty></Dbtr>
+              <DbtrAcct><Id><IBAN>CH9300762011623852957</IBAN></Id></DbtrAcct>
+            </RltdPties>
+            <RmtInf><Ustrd>Zahlung Oktober</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">7250.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-20</Dt></BookgDt>
+        <ValDt><Dt>2026-10-20</Dt></ValDt>
+        <AcctSvcrRef>BNK-20261020-0004</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>XBCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs><EndToEndId>E2E-0004</EndToEndId></Refs>
+            <Chrgs><Rcrd><Amt Ccy="USD">0.00</Amt><ChrgInclInd>false</ChrgInclInd><Br>DEBT</Br></Rcrd></Chrgs>
+            <RltdPties>
+              <Dbtr><Pty><Nm>SAKURA COMPONENTS KK TOKYO</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>PO 4471/4472 OCT SHIPMENTS</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="EUR">1500.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-20</Dt></BookgDt>
+        <ValDt><Dt>2026-10-20</Dt></ValDt>
+        <AcctSvcrRef>BNK-20261020-0005</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>XBCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs><EndToEndId>E2E-0005</EndToEndId></Refs>
+            <Chrgs><Rcrd><Amt Ccy="EUR">0.00</Amt><ChrgInclInd>false</ChrgInclInd><Br>SHAR</Br></Rcrd></Chrgs>
+            <RltdPties>
+              <Dbtr><Pty><Nm>GLOBAL CONSULTING PARTNERS</Nm></Pty></Dbtr>
+              <DbtrAcct><Id><IBAN>FR7630006000011234567890189</IBAN></Id></DbtrAcct>
+            </RltdPties>
+            <RmtInf><Ustrd>PAYMENT</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">10000.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-20</Dt></BookgDt>
+        <ValDt><Dt>2026-10-20</Dt></ValDt>
+        <AcctSvcrRef>BNK-20261020-0006</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>XBCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs><EndToEndId>E2E-0006</EndToEndId></Refs>
+            <Chrgs><Rcrd><Amt Ccy="USD">0.00</Amt><ChrgInclInd>false</ChrgInclInd><Br>DEBT</Br></Rcrd></Chrgs>
+            <RltdPties>
+              <Dbtr><Pty><Nm>MAPLE LEAF INSTRUMENTS</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>INV-2026-0108 FIRST INSTALMENT</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+      <Ntry>
+        <Amt Ccy="USD">48000.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts><Cd>BOOK</Cd></Sts>
+        <BookgDt><Dt>2026-10-20</Dt></BookgDt>
+        <ValDt><Dt>2026-10-20</Dt></ValDt>
+        <AcctSvcrRef>BNK-20261020-0007</AcctSvcrRef>
+        <BkTxCd><Domn><Cd>PMNT</Cd><Fmly><Cd>RCDT</Cd><SubFmlyCd>XBCT</SubFmlyCd></Fmly></Domn></BkTxCd>
+        <NtryDtls>
+          <TxDtls>
+            <Refs><EndToEndId>E2E-0007</EndToEndId></Refs>
+            <Chrgs><Rcrd><Amt Ccy="USD">0.00</Amt><ChrgInclInd>false</ChrgInclInd><Br>DEBT</Br></Rcrd></Chrgs>
+            <RltdPties>
+              <Dbtr><Pty><Nm>PAMPA LOGISTICS SA</Nm></Pty></Dbtr>
+            </RltdPties>
+            <RmtInf><Ustrd>INV-2026-0109</Ustrd></RmtInf>
+          </TxDtls>
+        </NtryDtls>
+      </Ntry>
+    </Stmt>
+  </BkToCstmrStmt>
+</Document>

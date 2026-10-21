@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: cashmatch
+      POSTGRES_USER: cashmatch
+      POSTGRES_PASSWORD: cashmatch
+    ports: ["5432:5432"]
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "cashmatch"]
+      interval: 2s
+      retries: 30
+
+  app:
+    build: .
+    ports: ["8080:8080"]
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/cashmatch
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      # Without a key: CASHMATCH_AGENT_ENABLED=false CASHMATCH_CHAT_MODEL=none.
+      # The rules still run and everything else goes to the review queue.
+      CASHMATCH_AGENT_ENABLED: ${CASHMATCH_AGENT_ENABLED:-true}
+      CASHMATCH_CHAT_MODEL: ${CASHMATCH_CHAT_MODEL:-anthropic}
+    depends_on:
+      postgres: { condition: service_healthy }

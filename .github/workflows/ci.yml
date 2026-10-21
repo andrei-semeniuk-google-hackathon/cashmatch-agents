@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 25
+          cache: maven
+      # Unit tests, Spring Modulith boundary checks and the Testcontainers flow test.
+      # The live agent eval also runs on main when the ANTHROPIC_API_KEY secret exists.
+      - run: ./mvnw -B verify
+        env:
+          ANTHROPIC_API_KEY: ${{ github.event_name == 'push' && secrets.ANTHROPIC_API_KEY || '' }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: module-diagrams
+          path: target/spring-modulith-docs/

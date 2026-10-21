@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: cashmatch
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/cashmatch}
+    username: ${DATABASE_USER:cashmatch}
+    password: ${DATABASE_PASSWORD:cashmatch}
+  flyway:
+    locations: classpath:db/migration,classpath:db/demo
+  modulith:
+    events:
+      jdbc:
+        schema-initialization:
+          enabled: true
+      republish-outstanding-events-on-restart: true
+  ai:
+    model:
+      chat: ${CASHMATCH_CHAT_MODEL:anthropic}
+    anthropic:
+      api-key: ${ANTHROPIC_API_KEY:}
+      chat:
+        options:
+          model: ${CASHMATCH_MODEL:claude-sonnet-5-5}
+          temperature: 0.0
+          max-tokens: 2048
+    mcp:
+      server:
+        protocol: STREAMABLE
+        name: cashmatch-receivables
+        version: 0.1.0
+        instructions: Read-only access to open receivables, customers, FX rates and settlement previews.
+
+cashmatch:
+  agent:
+    enabled: ${CASHMATCH_AGENT_ENABLED:true}
+  tolerances:
+    fx-relative: 0.005
+    max-bank-charges-eur: 35.00
+    auto-post-limit-eur: 25000.00
+    min-agent-confidence: 0.85
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,modulith
+  observations:
+    annotations:
+      enabled: true
